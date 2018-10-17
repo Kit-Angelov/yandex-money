@@ -1,10 +1,10 @@
 from aiohttp import web
 import asyncio
-import time
 import redis
 import json
 from yandex_api.pay import pay
 from status_checker import status_check
+from . import config
 
 
 async def handler_payment(request):
@@ -35,11 +35,11 @@ async def handler_payment(request):
         # добавляем в редис запись о созданной транзакции с необходимимыми данными для проверки статуса
         redis_content = {
             "url_for_answer": url_for_answer,
-            "ext_auth_success_uri": data['YANDEX_MONEY_SUCCESS_URI'],
-            "ext_auth_fail_uri": data['YANDEX_MONEY_FAIL_URI'],
+            "yandex_auth_success_uri": data['YANDEX_MONEY_SUCCESS_URI'],
+            "yandex_auth_fail_uri": data['YANDEX_MONEY_FAIL_URI'],
             "request_token": False,
         }
-        r = redis.StrictRedis()
+        r = redis.StrictRedis(config.redis_db)
         r.set(payment_request_id, json.dumps(redis_content))
 
         # возвращаем на главнй сервер идентификатор транзакции и юрл редиректа клиента для подтверждения транзакции
