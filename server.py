@@ -40,7 +40,7 @@ async def handler_payment(request):
             "yandex_auth_fail_uri": data['YANDEX_MONEY_FAIL_URI'],
             "request_token": False,
         }
-        r = redis.StrictRedis(config.redis_db)
+        r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
         r.set(payment_request_id, json.dumps(redis_content))
 
         # возвращаем на главнй сервер идентификатор транзакции и юрл редиректа клиента для подтверждения транзакции

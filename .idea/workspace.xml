@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8b89c5f-34e6-4379-84a2-0bc2ffa14669" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/status_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/status_checker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,25 +46,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="390">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
-                <marker date="1539786743736" expanded="true" signature="166:167" ph="..." />
-                <marker date="1539786743736" expanded="true" signature="1908:2402" ph="..." />
-                <marker date="1539786743736" expanded="true" signature="2053:2237" ph="..." />
+                <element signature="e#0#23#0" expanded="true" />
+                <marker date="1539788048194" expanded="true" signature="166:167" ph="..." />
+                <marker date="1539788048194" expanded="true" signature="1946:2440" ph="..." />
+                <marker date="1539788048194" expanded="true" signature="2091:2275" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/status_checker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#1#13#0" expanded="true" />
                 <marker date="1539786885596" expanded="true" signature="2144:2145" ph="..." />
@@ -135,9 +132,9 @@
         <option value="$PROJECT_DIR$/yandex_api/methods.py" />
         <option value="$PROJECT_DIR$/yandex_api/api.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/status_checker.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -166,11 +163,6 @@
             <path>
               <item name="yandex-money-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="yandex-money-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yandex-money-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yandex-money-server" type="462c0819:PsiDirectoryNode" />
-              <item name="yandex_api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,18 +293,6 @@
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <marker date="1539786743736" expanded="true" signature="166:167" ph="..." />
-            <marker date="1539786743736" expanded="true" signature="1908:2402" ph="..." />
-            <marker date="1539786743736" expanded="true" signature="2053:2237" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -322,11 +302,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/status_checker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#1#13#0" expanded="true" />
             <marker date="1539786885596" expanded="true" signature="2144:2145" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1539788048194" expanded="true" signature="166:167" ph="..." />
+            <marker date="1539788048194" expanded="true" signature="1946:2440" ph="..." />
+            <marker date="1539788048194" expanded="true" signature="2091:2275" ph="..." />
           </folding>
         </state>
       </provider>
