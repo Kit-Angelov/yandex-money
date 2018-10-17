@@ -2,13 +2,13 @@ import redis
 import json
 from yandex_api import api
 import requests
-from . import config
+import config
 import time
 
 
 # проверка статуса транзакции по списку из редиса и отправляем запрос со статусом по указаннному юрл
 def status_check():
-    r = redis.StrictRedis(config.redis_db)
+    r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
 
     while True:
         all_operations = r.scan_iter()

@@ -2,9 +2,10 @@ from aiohttp import web
 import asyncio
 import redis
 import json
-from yandex_api.pay import pay
+from yandex_api.api import pay
 from status_checker import status_check
-from . import config
+import config
+import argparse
 
 
 async def handler_payment(request):
@@ -48,9 +49,19 @@ async def handler_payment(request):
         raise web.HTTPBadRequest(text='operation already exist')
 
 
-app = web.Application()
-app.add_routes([web.post('/pay', handler_payment)])
+async def run():
+    app = web.Application()
+    app.add_routes([web.post('/pay', handler_payment)])
 
-loop = asyncio.get_event_loop()
-loop.run_in_executor(None, status_check)
-web.run_app(app)
+    loop = asyncio.get_event_loop()
+    loop.run_in_executor(None, status_check)
+    return app
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="yandex-money-server")
+    parser.add_argument('--port')
+    args = parser.parse_args()
+
+    app = run()
+    web.run_app(app, port=args.port)
