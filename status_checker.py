@@ -37,12 +37,14 @@ def status_check():
 
             # если статус транзакции ошибка, то удаляем из редис
             elif status["value"] == "refused":
-                send_operation_info(url_for_answer, status["value"], payment_request_id)
-                r.delete(operation)
+                result_ok = send_operation_info(url_for_answer, status["value"], payment_request_id)
+                if result_ok:
+                    r.delete(operation)
             # если статус транзакции успех, то удаляем из редис
             elif status["value"] == "success":
-                send_operation_info(url_for_answer, status["value"], payment_request_id, invoice_id=status["invoice_id"])
-                r.delete(operation)
+                result_ok = send_operation_info(url_for_answer, status["value"], payment_request_id, invoice_id=status["invoice_id"])
+                if result_ok:
+                    r.delete(operation)
 
         time.sleep(config.check_status_sleep)
 
@@ -55,7 +57,8 @@ def send_operation_info(url_for_answer, status, payment_request_id, error=None, 
         "invoice_id": invoice_id
     }
 
-    try:
-        requests.post(url_for_answer, data=data)
-    except Exception as e:
-        pass
+    r = requests.post(url_for_answer, data=data)
+    if r.status_code != 200:
+        return False
+    else:
+        return True
