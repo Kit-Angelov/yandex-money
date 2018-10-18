@@ -13,10 +13,10 @@ async def handler_payment(request):
     try:  # проверяем полноту данных
         url_for_answer = data['url_for_answer']
         yandex_access_dict = {
-            'yandex_wallet': data['YANDEX_MONEY_WALLET'],
-            'yandex_client_id': data['YANDEX_MONEY_CLIENT_ID'],
-            'yandex_auth_success_uri': data['YANDEX_MONEY_SUCCESS_URI'],
-            'yandex_auth_fail_uri': data['YANDEX_MONEY_FAIL_URI']
+            'yandex_wallet': data['YANDEX_WALLET'],
+            'yandex_client_id': data['YANDEX_CLIENT_ID'],
+            'yandex_auth_success_uri': data['YANDEX_SUCCESS_URI'],
+            'yandex_auth_fail_uri': data['YANDEX_FAIL_URI']
         }
         amount = float(data['amount'])
     except Exception as e:
