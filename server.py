@@ -13,10 +13,10 @@ async def handler_payment(request):
     try:  # проверяем полноту данных
         url_for_answer = data['url_for_answer']
         yandex_access_dict = {
-            'yandex_wallet': data['YANDEX_WALLET'],
-            'yandex_client_id': data['YANDEX_CLIENT_ID'],
-            'yandex_auth_success_uri': data['YANDEX_SUCCESS_URI'],
-            'yandex_auth_fail_uri': data['YANDEX_FAIL_URI']
+            'yandex_wallet': data['yandex_wallet'],
+            'yandex_client_id': data['yandex_client_id'],
+            'yandex_auth_success_uri': data['yandex_auth_success_uri'],
+            'yandex_auth_fail_uri': data['yandex_auth_fail_uri']
         }
         amount = float(data['amount'])
     except Exception as e:
@@ -36,8 +36,8 @@ async def handler_payment(request):
         # добавляем в редис запись о созданной транзакции с необходимимыми данными для проверки статуса
         redis_content = {
             "url_for_answer": url_for_answer,
-            "yandex_auth_success_uri": data['YANDEX_MONEY_SUCCESS_URI'],
-            "yandex_auth_fail_uri": data['YANDEX_MONEY_FAIL_URI'],
+            "yandex_auth_success_uri": data['yandex_auth_success_uri'],
+            "yandex_auth_fail_uri": data['yandex_auth_success_uri'],
             "request_token": False,
         }
         r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
