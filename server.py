@@ -39,6 +39,7 @@ async def handler_payment(request):
             "yandex_auth_success_uri": data['yandex_auth_success_uri'],
             "yandex_auth_fail_uri": data['yandex_auth_success_uri'],
             "request_token": False,
+            "yandex_client_id": data['yandex_client_id']
         }
         r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
         r.set(payment_request_id, json.dumps(redis_content))
