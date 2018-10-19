@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b89c5f-34e6-4379-84a2-0bc2ffa14669" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/status_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/status_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yandex_api/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/yandex_api/api.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,27 +37,27 @@
         <counts>
           <entry key="Python Console" value="232" />
           <entry key="dummy" value="10" />
-          <entry key="py" value="7382" />
+          <entry key="py" value="7387" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="7614" />
+          <entry key="Python" value="7619" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="505">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <marker date="1539944805803" expanded="true" signature="166:167" ph="..." />
+                <marker date="1539947366024" expanded="true" signature="166:167" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yandex_api/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+            <state relative-caret-position="585">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -154,9 +152,9 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/yandex_api/methods.py" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/status_checker.py" />
         <option value="$PROJECT_DIR$/yandex_api/api.py" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -310,17 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1539944805803" expanded="true" signature="166:167" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yandex_api/methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -347,10 +334,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yandex_api/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="585">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1539947366024" expanded="true" signature="166:167" ph="..." />
           </folding>
         </state>
       </provider>
