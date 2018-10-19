@@ -15,7 +15,7 @@ def status_check():
         for operation in all_operations:
             if r.get(operation) is None:
                 continue
-            operation_data = json.loads(r.get(operation))
+            operation_data = json.loads(r.get(operation).decode("utf-8"))
 
             url_for_answer = operation_data['url_for_answer']
             yandex_auth_success_uri = operation_data['yandex_auth_success_uri']
@@ -33,7 +33,7 @@ def status_check():
                 continue
 
             if status["value"] == "in_progress":
-                send_operation_info(url_for_answer, status["value"], payment_request_id)
+                continue
 
             # если статус транзакции ошибка, то удаляем из редис
             elif status["value"] == "refused":
