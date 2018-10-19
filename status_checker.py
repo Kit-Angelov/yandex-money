@@ -22,7 +22,7 @@ def status_check():
             yandex_auth_fail_uri = operation_data['yandex_auth_fail_uri']
             request_token = operation_data['request_token']
             yandex_client_id = operation_data['yandex_client_id']
-            yandex_instance_id_key = operation.data['yandex_instance_id_key']
+            yandex_instance_id_key = operation_data['yandex_instance_id_key']
             payment_request_id = operation
 
             status = api.check_status(yandex_client_id,
