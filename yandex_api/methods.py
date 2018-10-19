@@ -64,8 +64,7 @@ def external_payment_process(external_payment,
 
     # транзакция завершилась успешно
     if status_response_external_payment_process == 'success':
-        invoice_id = response_for_external_payment_process['invoice_id']
-        return {"key": "status", "value": "success", "invoice_id": invoice_id}
+        return {"key": "status", "value": "success"}
 
     # транзакция завершилась с ошибкой
     elif status_response_external_payment_process == 'refused':

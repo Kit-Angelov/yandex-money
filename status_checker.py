@@ -42,19 +42,18 @@ def status_check():
                     r.delete(operation)
             # если статус транзакции успех, то удаляем из редис
             elif status["value"] == "success":
-                result_ok = send_operation_info(url_for_answer, status["value"], payment_request_id, invoice_id=status["invoice_id"])
+                result_ok = send_operation_info(url_for_answer, status["value"], payment_request_id)
                 if result_ok:
                     r.delete(operation)
 
         time.sleep(config.check_status_sleep)
 
 
-def send_operation_info(url_for_answer, status, payment_request_id, error=None, invoice_id=None):
+def send_operation_info(url_for_answer, status, payment_request_id, error=None):
     data = {
         "error": error,
         "status": status,
-        "payment_request_id": payment_request_id,
-        "invoice_id": invoice_id
+        "payment_request_id": payment_request_id
     }
 
     r = requests.post(url_for_answer, data=data)
