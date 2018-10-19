@@ -47,6 +47,7 @@ def status_check():
                 result_ok = send_operation_info(url_for_answer, status["value"], payment_request_id)
                 if result_ok:
                     r.delete(operation)
+            r.bgsave()
 
         time.sleep(config.check_status_sleep)
 
