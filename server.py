@@ -24,7 +24,10 @@ async def handler_payment(request):
 
     # создаем транзакцию в яндекс-деньгах. получаем идентификатор операции, юрл для подтвреждения пользователем платежа
     loop = asyncio.get_event_loop()
-    redirect_url_access_pay, payment_request_id = await loop.run_in_executor(None, pay, amount, yandex_access_dict)
+    redirect_url_access_pay, payment_request_id, yandex_instance_id_key = await loop.run_in_executor(None,
+                                                                                                     pay,
+                                                                                                     amount,
+                                                                                                     yandex_access_dict)
 
     # если все ок (транзакция создана)
     if redirect_url_access_pay is not None and payment_request_id is not None:
@@ -39,7 +42,8 @@ async def handler_payment(request):
             "yandex_auth_success_uri": data['yandex_auth_success_uri'],
             "yandex_auth_fail_uri": data['yandex_auth_success_uri'],
             "request_token": False,
-            "yandex_client_id": data['yandex_client_id']
+            "yandex_client_id": data['yandex_client_id'],
+            "yandex_instance_id_key": yandex_instance_id_key
         }
         r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
         r.set(payment_request_id, json.dumps(redis_content))

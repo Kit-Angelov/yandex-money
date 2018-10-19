@@ -42,12 +42,12 @@ def pay(amount, yandex_access):
         return
     redirect_url_for_access_pay = response_external_payment_process["value"]
 
-    return redirect_url_for_access_pay, payment_request_id
+    return redirect_url_for_access_pay, payment_request_id, yandex_instance_id_key
 
 
 # проверка статуса транзакции
-def check_status(yandex_client_id, payment_request_id, yandex_auth_success_uri, yandex_auth_fail_uri):
-    yandex_instance_id_key = methods.get_yandex_instance_id_key(yandex_client_id)
+def check_status(yandex_client_id, yandex_instance_id_key, payment_request_id,
+                 yandex_auth_success_uri, yandex_auth_fail_uri):
 
     external_payment = ExternalPayment(yandex_instance_id_key)
 
