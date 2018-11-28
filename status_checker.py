@@ -2,7 +2,7 @@ import redis
 import json
 from yandex_api import api
 import requests
-import config
+import settings as config
 import time
 
 
