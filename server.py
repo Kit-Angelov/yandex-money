@@ -47,8 +47,10 @@ async def handler_payment(request):
         }
         r = redis.StrictRedis(config.redis_host, config.redis_port, config.redis_db)
         r.set(payment_request_id, json.dumps(redis_content))
-        r.bgsave()
-
+        try:
+            r.bgsave()
+        except:
+            pass
         # возвращаем на главнй сервер идентификатор транзакции и юрл редиректа клиента для подтверждения транзакции
         return web.json_response(response_content)
     else:
