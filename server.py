@@ -4,7 +4,7 @@ import redis
 import json
 from yandex_api.api import pay
 from status_checker import status_check
-import config
+import settings as config
 import argparse
 
 
