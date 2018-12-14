@@ -18,7 +18,7 @@ def get_yandex_instance_id_key(yandex_client_id):
 # запрос на создание платежной операции, возвращает идентификатор процесса платежа
 def external_payment_request(external_payment, yandex_instance_id_key, yandex_wallet, amount, message=None):
     if message is None:
-        message = "payment message from yandex-money-python"
+        message = "пополнение баланса в сервисе RRDoc"
 
     external_payment_request_data = {
         "pattern_id": "p2p",
